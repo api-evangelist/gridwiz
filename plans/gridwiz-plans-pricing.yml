@@ -1,0 +1,22 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.gridwiz.com/en/service/service.php
+plan_count: 0
+plans: []
+note: >-
+  Gridwiz publishes no pricing, plans or tiers of any kind. It is an energy services and
+  hardware business: demand response revenue is shared with participating customers out of
+  the Korean power market ("Profit without upfront investment"), ESS/renewable/e-mobility
+  work is quoted per project, and the EV charging hardware is sold B2B to EVSE suppliers
+  and OEMs. Every commercial path on the site terminates at a contact form
+  (https://www.gridwiz.com/en/contact/contact.php, HTTP 200) or a phone number
+  (Tel 02.529.9851). There is no self-serve signup, no API product, and therefore no
+  published plan to record. This is an honest zero, not a missing harvest.
+x-evidence:
+- url: https://www.gridwiz.com/en/service/service.php
+  status: 200
+- url: https://www.gridwiz.com/en/solution/dr.php
+  status: 200
+- url: https://www.gridwiz.com/en/contact/contact.php
+  status: 200
+checked: '2026-08-22'

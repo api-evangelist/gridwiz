@@ -1,0 +1,22 @@
+generated: '2026-08-22'
+method: searched
+source: https://www.gridwiz.com/en/
+limit_count: 0
+rate_limits: []
+headers: []
+note: >-
+  No rate limits are documented because there is no public API to limit. Gridwiz publishes
+  no developer portal, no API reference and no machine-readable contract; contract discovery
+  probed www.gridwiz.com, em.gridwiz.com and www.sky-blue.kr for OpenAPI, GraphQL, MCP,
+  A2A and .well-known surfaces and found none. gridwiz.com additionally serves a wildcard
+  DNS catch-all (every nonexistent subdomain, including api./dev./openapi./portal., resolves
+  to 203.245.24.17 and answers HTTP 406 with a 156-byte body behind a self-signed
+  certificate), so no API host exists to observe limits on either. Honest zero.
+x-evidence:
+- url: https://www.gridwiz.com/openapi.json
+  status: 404
+- url: https://api.gridwiz.com/
+  status: 406
+- url: https://em.gridwiz.com/openapi.json
+  status: 404
+checked: '2026-08-22'

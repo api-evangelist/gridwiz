@@ -1,0 +1,70 @@
+generated: '2026-08-22'
+method: searched
+source: https://em.gridwiz.com/en/solutions/
+basis: vendor-claim
+note: >-
+  Gridwiz publishes NO machine-readable API contract (no OpenAPI, AsyncAPI, GraphQL SDL,
+  WSDL or .proto was found on any host it controls), so nothing here is derived from a
+  spec. Every entry below is a standards claim Gridwiz makes in its own public product
+  and solutions copy, recorded with the exact page it appears on. These are DEVICE- and
+  PROTOCOL-layer standards for EV charging and grid demand response — they describe the
+  hardware and communication stack Gridwiz ships, not a web API a developer can call.
+  They are recorded as documented claims and NOT verified against a contract; no
+  `Compliance` pointer is emitted, because Gridwiz publishes no certification or
+  compliance program page (probe-security-programs.py found no trust center and no
+  vulnerability disclosure program).
+standards:
+- id: din-spec-70121
+  name: DIN SPEC 70121 (DC charging communication)
+  conforms: true
+  verified: false
+  evidence: >-
+    "Gridwiz's CCS (Combined Charging System) EV charging solutions provide all necessary
+    products for EV manufacturers, EVSE suppliers, and charging service providers based on
+    international standards including DIN SPEC 70121, ISO 15118, and OCPP."
+  source: https://em.gridwiz.com/en/solutions/
+- id: iso-15118
+  name: ISO 15118 (Vehicle-to-Grid communication interface, incl. 15118-20 AC/DC, Plug & Charge)
+  conforms: true
+  verified: false
+  evidence: >-
+    Named on the e-Mobility solutions page and on the corporate services page
+    ("E-Mobility Communication ISO 15118-20 AC/DC, DIN SPEC 70121, V2G";
+    "Smart Charging PnC(Plug & Charge), CCS Modem, V2G").
+  source: https://www.gridwiz.com/en/service/service.php
+- id: ocpp
+  name: Open Charge Point Protocol
+  conforms: true
+  verified: false
+  evidence: Listed among the international standards the CCS charging solutions are built to.
+  source: https://em.gridwiz.com/en/solutions/
+- id: openadr
+  name: OpenADR (Open Automated Demand Response)
+  conforms: true
+  verified: false
+  evidence: >-
+    Gridwiz's demand response management system is publicly described as OpenADR-based.
+    No OpenADR VTN/VEN endpoint, profile certification listing, or conformance document
+    was found on a Gridwiz host.
+  source: https://www.gridwiz.com/en/solution/dr.php
+- id: openapi
+  conforms: false
+  evidence: >-
+    No OpenAPI/Swagger document at any probed location on www.gridwiz.com, em.gridwiz.com
+    or www.sky-blue.kr (openapi.json/yaml, swagger.json, v1/openapi.json, api-docs, docs,
+    redoc all 404 or catch-all).
+- id: asyncapi
+  conforms: false
+  evidence: No event/streaming contract published.
+- id: oauth2
+  conforms: false
+  evidence: No authorization server; /.well-known/oauth-authorization-server 404 on every host.
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration 404 on every host.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No API contract to evaluate.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt 404 on www.gridwiz.com and em.gridwiz.com.

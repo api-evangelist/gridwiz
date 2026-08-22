@@ -1,0 +1,68 @@
+generated: '2026-08-22'
+method: probed
+source: live GET probes of /.well-known/* on every Gridwiz-controlled host
+note: >-
+  No .well-known document is served on any Gridwiz host. www.gridwiz.com and em.gridwiz.com
+  return a real 404 for every path probed. www.sky-blue.kr (Gridwiz's Skyblue EV charging
+  service, "Copyright (c) 2021 GridWiz Inc.") is a static single-page site whose server
+  answers HTTP 200 with the same 6,937-byte homepage HTML for EVERY path, including a
+  deliberately nonsense control path — those 200s are a catch-all, not documents, and are
+  recorded here as misses. No WellKnown or SecurityTxt pointer is emitted.
+hit_count: 0
+hosts:
+- host: https://www.gridwiz.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /.well-known/zzz-control-probe
+    status: 404
+    bytes: 23770
+    note: honest 404 - the host does not catch-all
+- host: https://em.gridwiz.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  soft_404_control:
+    path: /.well-known/zzz-control-probe
+    status: 404
+    bytes: 103342
+    note: honest 404 - the host does not catch-all
+- host: https://www.sky-blue.kr
+  documents: []
+  soft_404_control:
+    path: /.well-known/zzz-control-probe
+    status: 200
+    bytes: 6937
+    note: >-
+      CATCH-ALL. Every probed path returns HTTP 200 with the identical 6,937-byte Skyblue
+      homepage HTML, including this nonsense control path. No document exists at any
+      /.well-known/ location on this host; the 200s are meaningless.
+x-evidence:
+  fetched: '2026-08-22'
+  probes: 57
+  user_agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126 Safari/537.36
