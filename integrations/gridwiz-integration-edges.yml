@@ -1,0 +1,50 @@
+edges:
+- partner_name: OpenADR
+  partner: null
+  type: contract
+  channel: network-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://products.openadr.org/
+  contract_reference:
+    register: OpenADR Alliance certified product database
+    spec_file: null
+    role: certified-product
+    registered_name: Gridwiz Co., Ltd.
+    matched_domain: gridwiz.com
+    certified_products:
+    - product: Gridwiz Demand Response Management System
+      type: VEN (client)
+      lapsed: false
+      profile: 2.0b
+      page: https://products.openadr.org/product/gridwiz-co-ltd-gridwiz-demand-response-management-system/
+    - product: Gridwiz Lavender
+      type: VEN (client)
+      lapsed: false
+      profile: 2.0a
+      page: https://products.openadr.org/product/gridwiz-inc-gridwiz-lavender/
+    - product: Gridwiz Power Management System
+      type: VEN (client)
+      lapsed: false
+      profile: 2.0b
+      page: https://products.openadr.org/product/gridwiz-inc-gridwiz-power-management-system/
+    - product: Gridwiz Standard OpenADR 2.0 VTN SDK
+      type: VTN (server)
+      lapsed: false
+      profile: 2.0a+b
+      page: https://products.openadr.org/product/gridwiz-inc-gridwiz-standard-openadr-2-0-vtn-sdk/
+    - product: Gridwiz OpenADR SDK 2.0b VEN
+      type: VEN (Client)
+      lapsed: false
+      profile: 2.0b
+      page: https://products.openadr.org/product/gridwiz-inc-openadr-2-0b-ven-standard-sdk/
+    profiles:
+    - 2.0a
+    - 2.0a+b
+    - 2.0b
+    detected_by: sweep-energy.py
+    detected: '2026-10-13'
+generated: '2026-10-13'
+method: searched
+checked:
+- https://products.openadr.org/
